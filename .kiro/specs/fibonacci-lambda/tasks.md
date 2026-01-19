@@ -91,7 +91,7 @@ This implementation plan breaks down the Fibonacci Lambda function into discrete
 
 - [x] 5. Create Terraform infrastructure configuration
   - Create `main.tf` file
-  - Configure S3 backend for state storage (bucket: demo-bucket-448479419844-us-east-1-cds3fac1gkujufq, region: us-east-1, key: fibonacci-lambda/terraform.tfstate)
+  - Configure S3 backend for state storage (bucket: xxxxx, region: us-east-1, key: fibonacci-lambda/terraform.tfstate)
   - Define IAM role resource with Lambda assume role policy
   - Attach AWSLambdaBasicExecutionRole policy to IAM role
   - Define Lambda function resource with Python 3.11 runtime

@@ -39,7 +39,7 @@ The migration will use native Terraform resources (`aws_lambda_capacity_provider
 │                                                             │
 │  ┌──────────────────────────────────────────────────────┐  │
 │  │  Capacity Provider                                   │  │
-│  │  - VPC: vpc-0e906eb9a1c35ab3a                       │  │
+│  │  - VPC: xxxxx                      │  │
 │  │  - Subnets: Multiple AZs                            │  │
 │  │  - Security Group                                    │  │
 │  │  - Operator Role (EC2 management permissions)       │  │
@@ -85,13 +85,13 @@ The migration will use native Terraform resources (`aws_lambda_capacity_provider
 ```terraform
 # Query existing VPC
 data "aws_vpc" "existing" {
-  id = "vpc-0e906eb9a1c35ab3a"
+  id = "xxxxxx1c35ab3a0e906eb9a1c35ab3a"
 }
 
 # Query all subnets in the VPC
 data "aws_subnets" "available" {
   filter {
-    name   = "vpc-id"
+    name   = "xxxxxx1c35ab3aid"
     values = [data.aws_vpc.existing.id]
   }
 }
@@ -104,7 +104,7 @@ data "aws_subnet" "selected" {
 ```
 
 **Interface:**
-- Input: VPC ID (vpc-0e906eb9a1c35ab3a)
+- Input: VPC ID (xxxxxx1c35ab3a0e906eb9a1c35ab3a)
 - Output: List of subnet IDs across multiple AZs
 
 ### 2. Security Group
@@ -114,7 +114,7 @@ data "aws_subnet" "selected" {
 **Terraform Resource:** `aws_security_group`
 
 **Configuration:**
-- VPC: Existing VPC (vpc-0e906eb9a1c35ab3a)
+- VPC: Existing VPC (xxxxxx1c35ab3a0e906eb9a1c35ab3a)
 - Egress: Allow all outbound traffic (required for Lambda service communication)
 - Ingress: No inbound rules needed (Lambda functions don't accept incoming connections)
 
@@ -320,7 +320,7 @@ variable "timeout" {
 variable "vpc_id" {
   description = "ID of the existing VPC for Lambda Managed Instances"
   type        = string
-  default     = "vpc-0e906eb9a1c35ab3a"
+  default     = "xxxxxx1c35ab3a0e906eb9a1c35ab3a"
 }
 
 variable "capacity_provider_max_vcpu" {
@@ -415,7 +415,7 @@ These will be validated through:
 
 **Scenario:** VPC or subnet not found
 **Handling:**
-- Verify VPC ID is correct (vpc-0e906eb9a1c35ab3a)
+- Verify VPC ID is correct (xxxxxx1c35ab3a0e906eb9a1c35ab3a)
 - Ensure subnets exist in the VPC
 - Check AWS credentials and region configuration
 

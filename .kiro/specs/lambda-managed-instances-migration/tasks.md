@@ -7,7 +7,7 @@ This implementation plan outlines the step-by-step tasks to migrate the existing
 ## Tasks
 
 - [x] 1. Add VPC data sources to query existing infrastructure
-  - Add data source for existing VPC (vpc-0e906eb9a1c35ab3a)
+  - Add data source for existing VPC (xxxx)
   - Add data source to query all subnets in the VPC
   - Add data source to get subnet details for AZ distribution
   - Select up to 3 subnets across different Availability Zones
@@ -51,7 +51,7 @@ This implementation plan outlines the step-by-step tasks to migrate the existing
   - _Requirements: 6.6_
 
 - [x] 7. Add optional variables for configuration
-  - Add variable for VPC ID with default vpc-0e906eb9a1c35ab3a
+  - Add variable for VPC ID with default xxxxxx1c35ab3a0e906eb9a1c35ab3a
   - Add variable for max vCPU count with default 16 (cost-conscious limit)
   - Add descriptions for all variables
   - _Requirements: 6.3_

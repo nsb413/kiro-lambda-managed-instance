@@ -69,10 +69,10 @@ variable "vpc_id" {
     - NAT Gateway or VPC endpoints for AWS service access
     - Sufficient IP address space for EC2 instances and ENIs
     
-    Default: vpc-0e906eb9a1c35ab3a (existing VPC in this account)
+    Default: xxxx (existing VPC in this account)
   EOT
   type        = string
-  default     = "vpc-0e906eb9a1c35ab3a"
+  default     = "xxxxxx"
 }
 
 variable "capacity_provider_max_vcpu" {

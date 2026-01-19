@@ -64,7 +64,7 @@ This document specifies the requirements for migrating an existing AWS Lambda fu
 
 #### Acceptance Criteria
 
-1. THE Terraform_Configuration SHALL use existing VPC vpc-0e906eb9a1c35ab3a
+1. THE Terraform_Configuration SHALL use existing VPC xxxx
 2. THE Terraform_Configuration SHALL use data sources to query existing VPC subnets
 3. THE Terraform_Configuration SHALL select at least two subnets in different Availability Zones from the existing VPC
 4. THE Terraform_Configuration SHALL create a new security group specifically for Managed Instances with appropriate ingress and egress rules

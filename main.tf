@@ -36,7 +36,7 @@ data "aws_vpc" "existing" {
 # preferred for security and require NAT Gateway or VPC endpoints for AWS service access.
 data "aws_subnets" "available" {
   filter {
-    name   = "vpc-id"
+    name   = "xxxxxx1c35ab3aid"
     values = [data.aws_vpc.existing.id]
   }
 

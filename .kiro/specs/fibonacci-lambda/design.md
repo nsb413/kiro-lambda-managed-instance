@@ -126,7 +126,7 @@ Extracts the input number from the Lambda event object.
 
 **Backend Configuration**:
 Terraform state will be stored remotely in S3 for team collaboration and state locking:
-- **S3 Bucket**: `demo-bucket-448479419844-us-east-1-cds3fac1gkujufq`
+- **S3 Bucket**: `xxxxxx`
 - **Region**: `us-east-1`
 - **Key**: `fibonacci-lambda/terraform.tfstate`
 - **Design Rationale**: Remote state storage enables team collaboration, provides state history, and prevents concurrent modifications. Using S3 in us-east-1 ensures low latency and high availability.

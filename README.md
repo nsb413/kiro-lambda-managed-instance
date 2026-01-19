@@ -54,11 +54,11 @@ Before deploying this Lambda function with Managed Instances, ensure you have:
    - Access S3 for Terraform state storage
 
 4. **S3 Backend** - The S3 bucket for Terraform state must exist:
-   - Bucket: `demo-bucket-448479419844-us-east-1-cds3fac1gkujufq`
+   - Bucket: `xxxxx`
    - Region: `us-east-1`
 
 5. **VPC Configuration** - An existing VPC with:
-   - VPC ID: `vpc-0e906eb9a1c35ab3a` (or update `vpc_id` variable)
+   - VPC ID: `xxxxx` (or update `vpc_id` variable)
    - Private subnets across multiple Availability Zones
    - NAT Gateway or VPC endpoints for AWS service access
    - Sufficient IP address space for EC2 instances
@@ -154,7 +154,7 @@ Available variables:
 - `timeout`: Function timeout in seconds (default: `10`)
 
 **Lambda Managed Instances Configuration:**
-- `vpc_id`: ID of the existing VPC (default: `vpc-0e906eb9a1c35ab3a`)
+- `vpc_id`: ID of the existing VPC (default: `xxxxxx1c35ab3a0e906eb9a1c35ab3a`)
 - `capacity_provider_max_vcpu`: Maximum vCPUs for capacity provider (default: `16`)
   - Controls maximum compute capacity and cost ceiling
   - 16 vCPUs ≈ 2-3 medium instances or 8 small instances
@@ -567,7 +567,7 @@ terraform apply -var="timeout=30"
 │                                                             │
 │  ┌──────────────────────────────────────────────────────┐  │
 │  │  Capacity Provider                                   │  │
-│  │  - VPC: vpc-0e906eb9a1c35ab3a                       │  │
+│  │  - VPC: xxxxxx1c35ab3a0e906eb9a1c35ab3a                       │  │
 │  │  - Subnets: Multiple AZs                            │  │
 │  │  - Security Group                                    │  │
 │  │  - Auto scaling (CPU-based)                         │  │
@@ -624,6 +624,7 @@ terraform apply -var="timeout=30"
 ├── README.md               # This file
 ├── IMPORT_GUIDE.md         # Guide for importing existing resources
 └── .kiro/
+    |-- hooks/
     └── specs/
         ├── fibonacci-lambda/
         │   ├── requirements.md  # Original requirements specification
