@@ -567,7 +567,7 @@ terraform apply -var="timeout=30"
 │                                                             │
 │  ┌──────────────────────────────────────────────────────┐  │
 │  │  Capacity Provider                                   │  │
-│  │  - VPC: xxxxxx1c35ab3a0e906eb9a1c35ab3a                       │  │
+│  │  - VPC: xxxx                       │  │
 │  │  - Subnets: Multiple AZs                            │  │
 │  │  - Security Group                                    │  │
 │  │  - Auto scaling (CPU-based)                         │  │
