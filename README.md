@@ -154,7 +154,7 @@ Available variables:
 - `timeout`: Function timeout in seconds (default: `10`)
 
 **Lambda Managed Instances Configuration:**
-- `vpc_id`: ID of the existing VPC (default: `xxxxxx1c35ab3a0e906eb9a1c35ab3a`)
+- `vpc_id`: ID of the existing VPC (default: `xxxxxx`)
 - `capacity_provider_max_vcpu`: Maximum vCPUs for capacity provider (default: `16`)
   - Controls maximum compute capacity and cost ceiling
   - 16 vCPUs ≈ 2-3 medium instances or 8 small instances
