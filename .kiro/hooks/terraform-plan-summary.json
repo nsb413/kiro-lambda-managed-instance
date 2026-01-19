@@ -1,0 +1,13 @@
+{
+  "name": "Format Terraform Files",
+  "description": "Automatically runs terraform fmt when Terraform files are saved",
+  "trigger": {
+    "type": "onFileSave",
+    "filePattern": "**/*.tf"
+  },
+  "action": {
+    "type": "executeCommand",
+    "command": "terraform fmt"
+  },
+  "enabled": true
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Summarize Terraform Plan/Apply",
+  "description": "Automatically summarizes terraform plan or apply output when those commands are mentioned",
+  "trigger": {
+    "type": "onMessageSent",
+    "pattern": "terraform (plan|apply)"
+  },
+  "action": {
+    "type": "sendMessage",
+    "message": "After running the terraform command, please provide a concise summary of:\n1. Resources to be added/changed/destroyed (with counts)\n2. Key infrastructure changes\n3. Any warnings or potential issues\n4. Recommended next steps\n\nKeep it brief and actionable."
+  },
+  "enabled": true
+}
